@@ -1,0 +1,56 @@
+@import "variables.scss";
+
+.gallery__container {
+    @media only screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.grid__container {
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        grid-template-columns: 1fr 1fr ;
+        padding-bottom: 36px;
+    @media only screen and (max-width: 767px) {
+        padding-bottom: 16px;
+    }
+    }
+}
+
+.flex__container {
+    @media only screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    }
+}
+
+.footer__main {
+    @media only screen and (min-width: 768px) {
+    display: flex;
+    justify-content: left;
+    }
+
+    div {
+        padding-right: 36px;
+    }
+
+}
+
+.lg-logo {
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+
+    img {
+        max-width: 120px;
+        max-height: 20px;
+    }
+}
+
+.footer__section {
+    @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+}

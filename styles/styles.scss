@@ -1,0 +1,202 @@
+@import "../styles/variables.scss";
+
+.header__section {
+    background-color: $bandsite-black;
+    img {
+        @include verComponentsPadding;
+    }
+}
+
+.header__img--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__coontainer {
+    width: 100%;
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+    }
+}
+
+.nav__ul--links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    @media only screen and (max-width: 767px) {
+        @include afterHeadlinesPadding;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        @include verComponentsPadding;
+        color: $white;
+    }
+
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        @include horiComponentsPadding;
+        
+        li {
+            padding: 0px 36px;
+        }
+        
+    }
+}
+
+.hero__section {
+    background-image: url("/assets/Images/hero-bio.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: left;
+    align-items: center
+}
+
+.hero__heading {
+    @include sectionHeader;
+    color: $white;
+    @include horiComponentsPadding;
+}
+
+.about__heading {
+    @include sectionHeader;
+    @include beforeHeadlinesPadding;
+    @include horiComponentsPadding;
+    @include afterHeadlinesPadding;
+    color: $bandsite-black;
+}
+
+.band__heading {
+    color: $bandsite-dard_black;
+    @include subHeader;
+    @include horiComponentsPadding;
+    padding-bottom: 36px;
+    @media only screen and (max-width: 767px) {
+        padding-bottom: 16px;
+    }
+}
+
+.band__img {
+    max-width: 100%;
+    height: auto;
+    @include horiComponentsPadding;
+
+}
+
+.img__desc--div {
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.band__desc {
+    color: $bandsite-black;
+    @include horiComponentsPadding;
+    @include verComponentsPadding;
+    font-weight: bold;
+}
+
+.band__text {
+    @include horiComponentsPadding;
+    @include bodyCopy;
+}
+
+.last-text {
+    padding-bottom: 36px;
+    @media only screen and (max-width: 767px) {
+        padding-bottom: 16px;
+    }
+}
+
+.gallery__section {
+    background-color: $mercury;
+}
+
+.gallery__heading {
+    @include sectionHeader;
+    @include beforeHeadlinesPadding;
+    @include horiComponentsPadding;
+    @include afterHeadlinesPadding;
+}
+
+
+.image__container img {
+    width: 100%;
+    @include horiComponentsPadding;
+
+    padding-bottom: 36px;
+    @media only screen and (max-width: 767px) {
+        padding-bottom: 16px;
+    }
+}
+
+
+.footer__section {
+    color: $white;
+    background-color: $bandsite-black;
+    @include horiComponentsPadding; 
+
+    p {
+        @include footerCopy;
+    }
+
+    h5, h4 {
+        @include subHeader;
+    }
+}
+
+.footer__sub--container {
+    padding-right: 36px;
+}
+
+.footer__heading {
+    @include sectionHeader;
+    @include beforeHeadlinesPadding;
+    @include afterHeadlinesPadding;
+}
+
+.icons__container {
+    display: flex;
+
+    img {
+        padding-right: 36px;
+        @media only screen and (max-width: 767px) {
+            padding-right: 16px;
+        }
+    }
+    
+}
+
+.sub__div {
+    @include beforeHeadlinesPadding;
+    @include afterHeadlinesPadding;
+}
+
+.bandsite {
+    @include beforeHeadlinesPadding;
+    @include subHeader;
+}
+
+.copyright {
+    @include beforeHeadlinesPadding;
+    @include afterHeadlinesPadding;
+}
+
