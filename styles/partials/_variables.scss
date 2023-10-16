@@ -119,6 +119,70 @@ $alabaster: #FAFAFA;
     }
 }
 
+@mixin topPadding {
+    padding-top: 36px;
+    
+    @media only screen and (max-width: 767px) {
+        padding-top: 16px;
+    }
+}
+
+@mixin rightPadding {
+    padding-right: 36px;
+    
+    @media only screen and (max-width: 767px) {
+        padding-right: 16px;
+    }
+}
+
+@mixin bottomPadding {
+    padding-bottom: 36px;
+    
+    @media only screen and (max-width: 767px) {
+        padding-bottom: 16px;
+    }
+}
+
+@mixin leftPadding {
+    padding-left: 36px;
+    
+    @media only screen and (max-width: 767px) {
+        padding-left: 16px;
+    }
+}
+
+//Margins
+@mixin topMargin {
+    margin-top: 36px;
+    
+    @media only screen and (max-width: 767px) {
+        margin-top: 16px;
+    }
+}
+
+@mixin rightMargin {
+    margin-right: 36px;
+    
+    @media only screen and (max-width: 767px) {
+        margin-right: 16px;
+    }
+}
+
+@mixin bottomMargin {
+    margin-bottom: 36px;
+    
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 16px;
+    }
+}
+
+@mixin leftMargin {
+    margin-left: 36px;
+    
+    @media only screen and (max-width: 767px) {
+        margin-left: 16px;
+    }
+}
 //Iconography
 
 @mixin bandsiteLogo {
@@ -193,7 +257,7 @@ $alabaster: #FAFAFA;
 }
 
 @mixin formFieldLabels {
-    border-radius: 4px;
+    padding-bottom: 4px;
 }
 
 @mixin formFieldBorder {

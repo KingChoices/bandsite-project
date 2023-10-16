@@ -4,7 +4,7 @@ console.log("Your script is working");
 //current page href
 var url = window.location.href;
 var main = document.getElementById("home__link");
-var shows = document.getElementById("shows__link");
+var shows = document.getElementById("show__link");
 
 // Function to check if a string ends with a given string (This code isn't mine, I was struggling and got an idea from stackoverflow)
 function endsWith(str, suffix) {
@@ -17,8 +17,8 @@ console.log(url);
 //Here is checking for the url ending, styles will be applied.
 if (endsWith(url, "index.html")) {
   main.style.color = "#AFAFAF";
-  main.style.borderBottom = "3px solid #AFAFAF";
+  main.style.borderBottom = "2px solid #AFAFAF";
 } else if (endsWith(url, "shows.html")) {
   shows.style.color = "#AFAFAF";
-  SHOWS.style.borderBottom = "3px solid #AFAFAF";
+  shows.style.borderBottom = "2px solid #AFAFAF";
 }

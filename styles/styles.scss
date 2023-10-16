@@ -1,5 +1,6 @@
-@import "../styles/variables.scss";
+@import "../styles/partials/variables";
 
+//Header Styles
 .header__section {
     background-color: $bandsite-black;
     img {
@@ -13,6 +14,7 @@
     align-items: center;
 }
 
+//Nav Styles
 .nav__coontainer {
     width: 100%;
     @media only screen and (min-width: 768px) {
@@ -55,6 +57,7 @@
     }
 }
 
+//Hero Styles
 .hero__section {
     background-image: url("/assets/Images/hero-bio.jpg");
     background-repeat: no-repeat;
@@ -81,6 +84,7 @@
     color: $bandsite-black;
 }
 
+//Band Styles
 .band__heading {
     color: $bandsite-dard_black;
     @include subHeader;
@@ -125,7 +129,7 @@
         padding-bottom: 16px;
     }
 }
-
+//Gallery Styles
 .gallery__section {
     background-color: $mercury;
 }
@@ -137,7 +141,6 @@
     @include afterHeadlinesPadding;
 }
 
-
 .image__container img {
     width: 100%;
     @include horiComponentsPadding;
@@ -148,7 +151,202 @@
     }
 }
 
+//Form Styles
+.comment__container--flex {
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.comment__container--imgdiv {
+    display: flex;
+    justify-content: center;
+    @include rightPadding;
+    @include leftPadding;
+    @include topPadding;
+}
+.comment__heading {
+    @include sectionHeader;
+    @include beforeHeadlinesPadding;
+    @include horiComponentsPadding;
+    @include afterHeadlinesPadding;
+}
+.comment__container--form {
+    @include rightPadding;
+    @include bottomPadding;
+}
+
+.comment__form--avatar {
+    @include avatarSize;
+    @include avatarRadius;
+}
+
+.comment__form--input {
+    @include formFieldHeight;
+    @include formFieldWidth;
+    @include formFieldRadius;
+    @include formFieldPadding;
+    @include formFieldBorder;
+    @include bottomPadding;
+    color: $bandsite-dard_black;
+
+    ::placeholder {
+        color: $bandsite-dard_black;
+        @include bodyCopy;
+    }
+}
+
+.comment__form--submit {
+    @include formFieldRadius;
+    @include formFieldWidth;
+    @include formFieldPadding;
+    background-color: $bandsite-black;
+    color: $white;
+    @include topMargin;
+}
+
+.comment__form--label {
+    @include formFieldLabels;
+    color: $mercury;
+    
+}
+
+.comment__form--comment--input {
+    @include bottomPadding;
+}
+
+//Comments Styles
+.post__container {
+    display: grid;
+    grid-template-columns: 19% 80%;
+    justify-content: space-evenly;
+    background-color: $white;
+    @include horiComponentsPadding;
+    @include bottomPadding;
+    
+}
+
+.post__container--imgdiv img {
+    @include avatarRadius;
+    @include avatarSize;
+    @include avatarPlaceholder;
+}
+
+.post__container--textdiv {
+    display: block;
+}
+
+.post__container--infodiv {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $mercury;
+
+    p {
+        @include bottomPadding;
+        color: $mercury;
+    }
+}
+
+.post__container--commentdiv p{
+    @include bodyCopy;
+    @include bottomPadding;
+    border-bottom: 1px solid $mercury;
+    
+}
+
+//Shows Styles
+.hero__section--shows {
+    background-image: url("../assets/Images/hero-shows.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero__heading--shows {
+    @include sectionHeader;
+    color: $white;
+    @include horiComponentsPadding;
+
+}
+
+.shows__heading {
+    @include sectionHeader;
+    color: $bandsite-black;
+    @include horiComponentsPadding;
+    @include verComponentsPadding;
+}
+
+.hero__header--text {
+    @include subHeader;
+    color: $white;
+    @include horiComponentsPadding;
+    @include verComponentsPadding;
+}
+
+.iframe__div {
+    display: flex;
+    justify-content: center;
+    @media only screen and (min-width: 768px) and (max-width: 1279px){
+        justify-content: left;
+        @include horiComponentsPadding;
+    }
+}
+.shows__container {
+    @include verComponentsPadding;
+}
+.shows__list--container {
+    display: block;
+    @include horiComponentsPadding;
+
+    @media only screen and (min-width: 768px) and (max-width: 1279px){
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-bottom: 1px solid $mercury;
+    }
+
+    hr {
+        background-color: $mercury;
+
+        @media only screen and (min-width: 768px) and (max-width: 1279px){
+            display: none;
+        }
+    }
+}
+
+.shows__list--datediv p {
+    color: $mercury;
+    @include formFieldLabels;
+    @include topPadding;
+}
+
+.mercury {
+    color: $mercury;
+    @include formFieldLabels;
+}
+
+.second {
+    @include bottomPadding;
+}
+
+.btn__div {
+    display: flex;
+    justify-content: center;
+}
+
+.buy__btn {
+    width: 100%;
+    background-color: $bandsite-black;
+    color: $white;
+    @include formFieldRadius;
+    @include formFieldPadding;
+    @include bottomMargin;
+
+}
+
+.buy__btn:hover {
+    background-color: red;
+}
+//Footer Styles
 .footer__section {
     color: $white;
     background-color: $bandsite-black;
