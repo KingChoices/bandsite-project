@@ -1,12 +1,5 @@
 @import "variables.scss"; 
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'AvenirNext';
-}
-
 @font-face {
     font-family: "AvenirNext";
     src: url("../assets/Font//AlternativeFiles/AvenirNextLTPro.ttf") format("truetype");
@@ -31,4 +24,10 @@
     text-decoration: none;
     @include verComponentsPadding;
     color: $white;
+}
+
+hr { 
+    width: 1px;
+    height: 20px;
+    display: inline-block!important;
 }
