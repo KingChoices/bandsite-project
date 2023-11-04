@@ -17,8 +17,8 @@ console.log(url);
 //Here is checking for the url ending, styles will be applied.
 if (endsWith(url, "index.html")) {
   main.style.color = "#AFAFAF";
-  main.style.borderBottom = "2px solid #AFAFAF";
+  main.style.borderBottom = "4px solid white";
 } else if (endsWith(url, "shows.html")) {
   shows.style.color = "#AFAFAF";
-  shows.style.borderBottom = "2px solid #AFAFAF";
+  shows.style.borderBottom = "4px solid white";
 }

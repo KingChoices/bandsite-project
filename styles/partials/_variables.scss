@@ -7,17 +7,38 @@ $bandsite-dard_black: #000000;
 $mercury: #E1E1E1;
 $alabaster: #FAFAFA;
 
+//Font Face
+
+@font-face {
+    font-family: "AvenirNext";
+    src: url("../assets/Font//AlternativeFiles/AvenirNextLTPro.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "AvenirNext";
+    src: url("../assets/Font/AlternativeFiles/AvenirNextLTProBold.ttf") format("truetype");
+    font-weight: 700; 
+}
+
+@font-face {
+    font-family: "AvenirNext";
+    src: url("../assets/Font/AlternativeFiles/AvenirNextLTProDemi.ttf") format("truetype");
+    font-weight: 600;
+}
+
+
 //Mixins
 
 @mixin pageHeader {
     font-size: 60px;
     line-height: 68px;
-    font-weight: bold 700;
+    font-weight: 700;
 
     @media only screen and (max-width: 767px){
         font-size: 24px;
         line-height: 32px;
-        font-weight: bold 700; 
+        font-weight: 700; 
     } 
 }
 
@@ -36,48 +57,48 @@ $alabaster: #FAFAFA;
 @mixin subHeader {
     font-size: 24px;
     line-height: 32px;
-    font-weight: Demi 600;
+    font-weight: 600;
 
     @media only screen and (max-width: 767px){
         font-size: 14px;
         line-height: 22px;
-        font-weight: demi 600;
+        font-weight: 600;
     }
 }
 
 @mixin bodyCopy {
     font-size: 14px;
     line-height: 22px;
-    font-weight: regular 400;
+    font-weight: 400;
 
     @media only screen and (max-width: 767px){
         font-size: 13px;
         line-height: 18px;
-        font-weight: regular 400;
+        font-weight: 400;
     }
 }
 
 @mixin footerCopy {
     font-size: 14px;
     line-height: 20px;
-    font-weight: regular 400;
+    font-weight: 400;
 
     @media only screen and (max-width: 767px){
         font-size: 13px;
         line-height: 18px;
-        font-weight: regular 400;
+        font-weight: 400;
     }
 }
 
 @mixin labelsButtons {
     font-size: 12px;
     line-height: 20px;
-    font-weight: bold 700;
+    font-weight: 700;
 
     @media only screen and (max-width: 767px){
         font-size: 10px;
         line-height: 20px;
-        font-weight: bold 700;
+        font-weight: 700;
     } 
 }
 
@@ -119,6 +140,46 @@ $alabaster: #FAFAFA;
     }
 }
 
+//Margins 
+
+@mixin beforeHeadlinesMargin {
+    margin-top: 48px;
+    
+    @media only screen and (max-width: 767px) {
+        margin-top: 24px;
+    }
+}
+
+@mixin afterHeadlinesMargin {
+    margin-bottom: 36px;
+    
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 16px;
+    }
+}
+
+@mixin horiComponentsMargin {
+    margin-right: 36px;
+    margin-left: 36px;
+    
+    @media only screen and (max-width: 767px) {
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+}
+
+@mixin verComponentsMargin {
+    margin-top: 36px;
+    margin-bottom: 36px;
+    
+    @media only screen and (max-width: 767px) {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+}
+
+//Specific Spacing Padding
+
 @mixin topPadding {
     padding-top: 36px;
     
@@ -151,7 +212,7 @@ $alabaster: #FAFAFA;
     }
 }
 
-//Margins
+//Specific Spacing Margins
 @mixin topMargin {
     margin-top: 36px;
     

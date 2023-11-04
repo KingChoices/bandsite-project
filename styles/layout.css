@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../assets/Font//AlternativeFiles/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../assets/Font/AlternativeFiles/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../assets/Font/AlternativeFiles/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+}
 @media only screen and (min-width: 768px) {
   .gallery__container {
     display: grid;

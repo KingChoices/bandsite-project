@@ -31,7 +31,7 @@
     align-items: center;
 
     @media only screen and (max-width: 767px) {
-        @include afterHeadlinesPadding;
+        //@include afterHeadlinesPadding;
     }
 
     li {
@@ -45,7 +45,7 @@
     }
 
     @media only screen and (min-width: 768px) {
-        display: flex;
+        display: block;
         justify-content: left;
         align-items: center;
         @include horiComponentsPadding;
@@ -55,6 +55,23 @@
         }
         
     }
+}
+
+.nav__link--div {
+    width: 100%;
+}
+
+.nav__ul--griddiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.nav__ul--griddiv div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include bottomPadding;
 }
 
 //Hero Styles
@@ -187,6 +204,7 @@
     @include formFieldPadding;
     @include formFieldBorder;
     @include bottomPadding;
+    @include bottomMargin;
     color: $bandsite-dard_black;
 
     ::placeholder {
@@ -201,7 +219,7 @@
     @include formFieldPadding;
     background-color: $bandsite-black;
     color: $white;
-    @include topMargin;
+    @include subHeader;
 }
 
 .comment__form--label {
@@ -225,7 +243,7 @@
     
 }
 
-.post__container--imgdiv img {
+.post__container--imgdiv {
     @include avatarRadius;
     @include avatarSize;
     @include avatarPlaceholder;
@@ -238,19 +256,32 @@
 .post__container--infodiv {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid $mercury;
-
-    p {
-        @include bottomPadding;
-        color: $mercury;
-    }
+    //border-top: 1px solid $mercury;
 }
 
-.post__container--commentdiv p{
+.post__container--datediv p{
     @include bodyCopy;
-    @include bottomPadding;
-    border-bottom: 1px solid $mercury;
+    color: $mercury;
     
+}
+
+.post__container--namediv h4{
+    @include subHeader;
+    @include bottomPadding;
+}
+
+.post__container--commentdiv {
+    @include bodyCopy;
+}
+
+.comments__hr {
+    @include bottomMargin;
+    @include horiComponentsMargin;
+    width: auto;
+    background-color: $mercury;
+    @include mobileDivider;
+    @include desktopDivider;
+    @include tabletDivider;
 }
 
 //Shows Styles
