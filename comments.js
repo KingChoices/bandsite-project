@@ -121,7 +121,7 @@
 
 //renderComments();
 
-function registerAndStoreKey() {
+function registerAndStoreKey() { //make key static 
   axios
     .get("https://project-1-api.herokuapp.com/register")
     .then((response) => {
@@ -151,12 +151,13 @@ function apiRequest(endpoint) {
     .then((response) => {
       console.log("API request successful:", response.data);
       function renderApiComments(newApiComment) {
-        for (var i = 0; i < response.data.length; i++) {
+        let reverseArr = response.data.reverse();
+        for (var i = 0; i < reverseArr.length; i++) {
           if (
-            response.data[i].name != null &&
-            response.data[i].comment != null
+            reverseArr[i].name != null &&
+            reverseArr[i].comment != null
           ) {
-            var info = response.data[i];
+            var info = reverseArr[i];
             const commentDiv = document.createElement("div");
             const innerDivOne = document.createElement("div");
             const img = document.createElement("img");
@@ -240,18 +241,15 @@ function apiRequest(endpoint) {
           comment: comment,
         };
 
-        fetch(`https://project-1-api.herokuapp.com/comments?api_key=${key}`, {
-          method: "POST",
-          headers: headers,
-          body: JSON.stringify(newComment),
-        })
-          .then((res) => res.json())
+        axios.post(`https://project-1-api.herokuapp.com/${endpoint}?api_key=${key}`, 
+          newComment
+        )
           .then((commentCreated) => {
-            console.log("comment posted", newComment);
+            console.log("comment posted", commentCreated);
+            
           })
           .catch((error) => {
             console.error("The error is: ", error);
-            // Handle the error
           });
 
         response.data.push(newComment);
@@ -271,8 +269,6 @@ function apiRequest(endpoint) {
 
 registerAndStoreKey();
 apiRequest("comments");
-apiRequest("showdates");
-
 // function newComment(name, comment) {
 //   const headers = {
 //     "Content-Type": "application/json",

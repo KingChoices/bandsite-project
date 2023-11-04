@@ -449,12 +449,6 @@
     margin-bottom: 16px;
   }
 }
-.comment__form--input ::-moz-placeholder {
-  color: #000000;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 400;
-}
 .comment__form--input ::placeholder {
   color: #000000;
   font-size: 14px;
@@ -462,11 +456,6 @@
   font-weight: 400;
 }
 @media only screen and (max-width: 767px) {
-  .comment__form--input ::-moz-placeholder {
-    font-size: 13px;
-    line-height: 18px;
-    font-weight: 400;
-  }
   .comment__form--input ::placeholder {
     font-size: 13px;
     line-height: 18px;
