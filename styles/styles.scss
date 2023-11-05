@@ -30,10 +30,6 @@
     justify-content: space-around;
     align-items: center;
 
-    @media only screen and (max-width: 767px) {
-        @include afterHeadlinesPadding;
-    }
-
     li {
         list-style: none;
     }
@@ -53,6 +49,41 @@
         li {
             padding: 0px 36px;
         }
+        
+    }
+}
+
+.nav__link--div {
+    width: 100%;
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        justify-content: left;
+        align-items: center;  
+    }
+}
+
+.nav__ul--griddiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        justify-content: left;
+        align-items: center;  
+    }
+}
+
+.nav__ul--griddiv div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include bottomPadding;
+
+    @media only screen and (min-width: 768px) {
+        
+        justify-content: center;
+        align-items: center;
+        
         
     }
 }
@@ -155,6 +186,10 @@
 .comment__container--flex {
     display: flex;
     justify-content: space-evenly;
+
+    @media only screen and (min-width: 1280px){
+        justify-content: center;
+    }
 }
 
 .comment__container--imgdiv {
@@ -187,6 +222,7 @@
     @include formFieldPadding;
     @include formFieldBorder;
     @include bottomPadding;
+    @include bottomMargin;
     color: $bandsite-dard_black;
 
     ::placeholder {
@@ -201,7 +237,16 @@
     @include formFieldPadding;
     background-color: $bandsite-black;
     color: $white;
-    @include topMargin;
+    @include subHeader;
+
+    @media only screen and (min-width: 1280px){
+        width: 30%;
+        float: right;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1279px){
+        width: 30%;
+        float: right;
+    } 
 }
 
 .comment__form--label {
@@ -222,10 +267,26 @@
     background-color: $white;
     @include horiComponentsPadding;
     @include bottomPadding;
-    
+
+    @media only screen and (min-width: 1280px){
+        max-width: 700px;
+    } 
 }
 
-.post__container--imgdiv img {
+#comments {
+    @media only screen and (min-width: 768px) and (max-width: 1279px){
+        max-width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+    } 
+    @media only screen and (min-width: 1280px){
+        max-width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.post__container--imgdiv {
     @include avatarRadius;
     @include avatarSize;
     @include avatarPlaceholder;
@@ -238,18 +299,44 @@
 .post__container--infodiv {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid $mercury;
-
-    p {
-        @include bottomPadding;
-        color: $mercury;
-    }
+    //border-top: 1px solid $mercury;
 }
 
-.post__container--commentdiv p{
+.post__container--datediv p{
     @include bodyCopy;
+    color: $mercury;
+    
+}
+
+.post__container--namediv h4{
+    @include subHeader;
     @include bottomPadding;
-    border-bottom: 1px solid $mercury;
+}
+
+.post__container--commentdiv {
+    @include bodyCopy;
+}
+
+.comments__hr {
+    @include bottomMargin;
+    @include horiComponentsMargin;
+    width: auto;
+    background-color: $mercury;
+    @include mobileDivider;
+    @include desktopDivider;
+    @include tabletDivider;
+
+    @media only screen and (min-width: 1280px){
+        max-width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1279px){
+        max-width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+    } 
     
 }
 
@@ -295,13 +382,23 @@
 }
 .shows__list--container {
     display: block;
-    @include horiComponentsPadding;
+    @include horiComponentsMargin;
 
     @media only screen and (min-width: 768px) and (max-width: 1279px){
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         border-bottom: 1px solid $mercury;
+    }
+
+    @media only screen and (min-width: 1280px) {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-bottom: 1px solid $mercury;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     hr {

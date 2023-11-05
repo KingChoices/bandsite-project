@@ -1,10 +1,7 @@
 @import "variables.scss"; 
 
-@font-face {
-    font-family: "AvenirNext";
-    src: url("../assets/Font//AlternativeFiles/AvenirNextLTPro.ttf") format("truetype");
-    src: url("../assets/Font/AlternativeFiles/AvenirNextLTProBold.ttf") format("truetype");
-    src: url("../assets/Font/AlternativeFiles/AvenirNextLTProDemi.ttf") format("truetype");
+body {
+    font-family: "AvenirNext", sans-serif;
 }
 
 .mobile-hidden {
