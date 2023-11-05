@@ -30,10 +30,6 @@
     justify-content: space-around;
     align-items: center;
 
-    @media only screen and (max-width: 767px) {
-        //@include afterHeadlinesPadding;
-    }
-
     li {
         list-style: none;
     }
@@ -45,7 +41,7 @@
     }
 
     @media only screen and (min-width: 768px) {
-        display: block;
+        display: flex;
         justify-content: left;
         align-items: center;
         @include horiComponentsPadding;
@@ -59,12 +55,22 @@
 
 .nav__link--div {
     width: 100%;
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        justify-content: left;
+        align-items: center;  
+    }
 }
 
 .nav__ul--griddiv {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        justify-content: left;
+        align-items: center;  
+    }
 }
 
 .nav__ul--griddiv div {
@@ -72,6 +78,14 @@
     justify-content: center;
     align-items: center;
     @include bottomPadding;
+
+    @media only screen and (min-width: 768px) {
+        
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
 }
 
 //Hero Styles
@@ -172,6 +186,10 @@
 .comment__container--flex {
     display: flex;
     justify-content: space-evenly;
+
+    @media only screen and (min-width: 1280px){
+        justify-content: center;
+    }
 }
 
 .comment__container--imgdiv {
@@ -220,6 +238,15 @@
     background-color: $bandsite-black;
     color: $white;
     @include subHeader;
+
+    @media only screen and (min-width: 1280px){
+        width: 30%;
+        float: right;
+    }
+    @media only screen and (min-width: 768px) and (max-width: 1279px){
+        width: 30%;
+        float: right;
+    } 
 }
 
 .comment__form--label {
@@ -240,7 +267,23 @@
     background-color: $white;
     @include horiComponentsPadding;
     @include bottomPadding;
-    
+
+    @media only screen and (min-width: 1280px){
+        max-width: 700px;
+    } 
+}
+
+#comments {
+    @media only screen and (min-width: 768px) and (max-width: 1279px){
+        max-width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+    } 
+    @media only screen and (min-width: 1280px){
+        max-width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 .post__container--imgdiv {
@@ -282,6 +325,19 @@
     @include mobileDivider;
     @include desktopDivider;
     @include tabletDivider;
+
+    @media only screen and (min-width: 1280px){
+        max-width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1279px){
+        max-width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+    } 
+    
 }
 
 //Shows Styles
@@ -326,13 +382,23 @@
 }
 .shows__list--container {
     display: block;
-    @include horiComponentsPadding;
+    @include horiComponentsMargin;
 
     @media only screen and (min-width: 768px) and (max-width: 1279px){
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         border-bottom: 1px solid $mercury;
+    }
+
+    @media only screen and (min-width: 1280px) {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-bottom: 1px solid $mercury;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     hr {

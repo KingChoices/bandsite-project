@@ -352,7 +352,7 @@ $alabaster: #FAFAFA;
 
 @mixin avatarSize {
     max-width: 48px;
-    min-height: 48px;
+    max-height: 48px;
 
     @media only screen and (max-width: 767px) {
         max-width: 36px;
