@@ -33,7 +33,7 @@ function apiRequest(endpoint) {
             const venueH = document.createElement("p");
             venueH.textContent = "VENUE";
             const venue = document.createElement("p");
-            venue.textContent = shows.location;
+            venue.textContent = shows.place;
 
             const locH = document.createElement("p");
             locH.textContent = "LOCATION";
